@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+  --color-space-black: #000000;
+  --color-silver: #E2E8F0;
+  --color-silver-muted: #94A3B8;
+  --color-cosmic-glow: rgba(226, 232, 240, 0.15);
+}
+
+:root {
+  --bg-deep-space: #000000;
+  --text-silver: #E2E8F0;
+  --text-silver-muted: #94A3B8;
+  --portfolio-bg: #FFFFFF;
+  --portfolio-text: #0A0A0A;
+}
+
+/* Blueprint Grid for wireframe loader */
+.blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.blueprint-grid-dense {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Glassmorphism restrained HUD */
+.glass-hud {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+.glass-hud:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Silver Metallic Text Gradient & Glow */
+.silver-text {
+  color: #E2E8F0;
+  text-shadow: 0 0 40px rgba(226, 232, 240, 0.25), 0 0 80px rgba(226, 232, 240, 0.1);
+}
+
+.silver-glow {
+  box-shadow: 0 0 40px -10px rgba(226, 232, 240, 0.3);
+}
+
+/* CTA Vibrant Gradient Aura */
+.cta-gradient-glow {
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #EC4899 100%);
+  filter: blur(40px);
+  opacity: 0.45;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .cta-gradient-glow {
+  opacity: 0.85;
+  transform: scale(1.08);
+}
+
+/* Cosmic Nebula Shifting Animations */
+@keyframes nebulaViolet {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-8%, 6%) scale(1.12); }
+  100% { transform: translate(4%, -4%) scale(0.96); }
+}
+
+@keyframes nebulaIndigo {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(7%, -8%) scale(1.1); }
+  100% { transform: translate(-5%, 5%) scale(0.98); }
+}
+
+@keyframes nebulaTeal {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-6%, -6%) scale(1.14); }
+  100% { transform: translate(6%, 6%) scale(0.92); }
+}
+
+@keyframes nebulaBlue {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(5%, 7%) scale(1.08); }
+  100% { transform: translate(-6%, -5%) scale(0.95); }
+}
+
+.animate-nebula-violet {
+  animation: nebulaViolet 42s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-nebula-indigo {
+  animation: nebulaIndigo 48s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-nebula-teal {
+  animation: nebulaTeal 52s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-nebula-blue {
+  animation: nebulaBlue 38s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Custom Scrollbar for sleek UX */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3F3F46;
+}
+
+/* Reduced Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

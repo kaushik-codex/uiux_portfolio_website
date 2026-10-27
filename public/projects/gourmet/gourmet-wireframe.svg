@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="100%" height="100%">
+  <rect width="400" height="800" rx="36" fill="#0A0F1D" stroke="#1E293B" stroke-width="2"/>
+  
+  <!-- Architectural Blueprint Grid -->
+  <defs>
+    <pattern id="wfGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="800" fill="url(#wfGrid)"/>
+
+  <!-- Telemetry Header -->
+  <g transform="translate(32, 40)">
+    <text x="0" y="0" fill="#F97316" font-family="Courier, monospace" font-size="11" letter-spacing="1">WIREFRAME // ARCHITECTURE SPEC</text>
+    <text x="0" y="16" fill="#64748B" font-family="Courier, monospace" font-size="9">GOURMET_THUMB_ZONE_V2.4</text>
+  </g>
+
+  <!-- Wireframe Module 1: Search -->
+  <g transform="translate(32, 90)">
+    <rect width="336" height="46" rx="8" fill="none" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <text x="14" y="27" fill="#F97316" font-family="Courier, monospace" font-size="11">[INPUT_MODULE: GLOBAL_SEARCH_QUERY]</text>
+  </g>
+
+  <!-- Wireframe Module 2: Category Slider -->
+  <g transform="translate(32, 160)">
+    <text x="0" y="0" fill="#64748B" font-family="Courier, monospace" font-size="10">ZONE A: HORIZONTAL THUMB FILTER LIST</text>
+    <rect y="10" x="0" width="70" height="32" rx="16" fill="rgba(249, 115, 22, 0.2)" stroke="#F97316" stroke-width="1"/>
+    <rect y="10" x="80" width="76" height="32" rx="16" fill="none" stroke="#475569" stroke-width="1"/>
+    <rect y="10" x="166" width="76" height="32" rx="16" fill="none" stroke="#475569" stroke-width="1"/>
+    <rect y="10" x="252" width="76" height="32" rx="16" fill="none" stroke="#475569" stroke-width="1"/>
+  </g>
+
+  <!-- Wireframe Module 3: Scannable List Signifiers Card -->
+  <g transform="translate(32, 230)">
+    <text x="0" y="0" fill="#64748B" font-family="Courier, monospace" font-size="10">ZONE B: LINEAR FEED ITEM ARCHITECTURE</text>
+    
+    <!-- Card 1 -->
+    <rect y="12" width="336" height="150" rx="12" fill="rgba(30, 41, 59, 0.4)" stroke="#475569" stroke-width="1"/>
+    <line x1="0" y1="100" x2="336" y2="100" stroke="#334155" stroke-dasharray="2 2"/>
+    <text x="16" y="125" fill="#E2E8F0" font-family="Courier, monospace" font-size="12">Affordance: Card First</text>
+    <text x="16" y="142" fill="#64748B" font-family="Courier, monospace" font-size="10">Instant conversion loop // 60fps gesture</text>
+    <circle cx="304" cy="125" r="12" fill="none" stroke="#F97316" stroke-width="1.5"/>
+    <path d="M301 120 L307 125 L301 130" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(32, 420)">
+    <rect width="336" height="150" rx="12" fill="rgba(30, 41, 59, 0.4)" stroke="#475569" stroke-width="1"/>
+    <line x1="0" y1="100" x2="336" y2="100" stroke="#334155" stroke-dasharray="2 2"/>
+    <text x="16" y="125" fill="#E2E8F0" font-family="Courier, monospace" font-size="12">Chevron Navigation Affordance</text>
+    <text x="16" y="142" fill="#64748B" font-family="Courier, monospace" font-size="10">Structured scanning path // Zero friction</text>
+    <circle cx="304" cy="125" r="12" fill="none" stroke="#F97316" stroke-width="1.5"/>
+    <path d="M301 120 L307 125 L301 130" fill="none" stroke="#F97316" stroke-width="1.5"/>
+  </g>
+
+  <!-- Bottom Navigation Zone Wireframe -->
+  <g transform="translate(32, 600)">
+    <rect width="336" height="50" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#F97316" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="40" y="30" fill="#F97316" font-family="Courier, monospace" font-size="10">ZONE C: PERSISTENT 4-TAB TOUCH ARENA</text>
+  </g>
+</svg>
