@@ -48,3 +48,18 @@ export interface SocialLink {
   iconName: 'mail' | 'github' | 'linkedin';
 }
 
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  affiliation?: string;
+  period: string;
+  score?: string;
+  details?: string;
+}
+
+export interface SkillDomain {
+  title: string;
+  subtitle: string;
+  skills: string[];
+}
+

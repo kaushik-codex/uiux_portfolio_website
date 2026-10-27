@@ -1,15 +1,18 @@
-import { Project, NavItem, SocialLink } from '@/types';
+import { Project, NavItem, SocialLink, EducationItem, SkillDomain } from '@/types';
 
 export const PERSONAL_INFO = {
   name: 'Kaushik Kalyan Bojja',
   headline: 'KAUSHIK KALYAN BOJJA',
   title: 'UI/UX Designer & Flutter Developer',
-  location: 'Available Globally / Remote',
+  location: 'Cuttack, India',
+  phone: '+91 966-840-2957',
   email: 'kkbojja@zohomail.in', // Verified production email
-  github: 'https://github.com/Strange-TQHC/', // Verified GitHub gateway
+  github: 'https://github.com/kaushik-codex/', // Verified GitHub gateway
   linkedin: 'https://www.linkedin.com/in/kkbojja/', // Verified LinkedIn profile
   availabilityStatus: 'Available for selective freelance & full-time roles',
   heroStatement: 'Sculpting high-precision design systems and translating them into fluid, production-grade Flutter applications.',
+  summary:
+    'Hybrid UI/UX Designer and Mobile Developer specializing in bridging the gap between high-fidelity layouts and responsive digital products. Experience executing an end-to-end design process: translating initial low-fidelity wireframes into high-fidelity Figma components, interactive prototypes, and production-grade frontend structures. Adept at eliminating the designer-developer divide by applying strong user empathy, rigorous information architecture, and structured design token systems to cross-platform experiences.',
   closingStatement: 'Currently crafting seamless cross-platform experiences. Available for selective freelance & full-time roles.',
 };
 
@@ -133,27 +136,73 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const SKILL_DOMAINS = [
+export const SKILL_DOMAINS: SkillDomain[] = [
   {
-    title: 'UI/UX & Product Design',
+    title: 'UI/UX & Design Tools',
+    subtitle: 'Figma & Visual Systems',
     skills: [
-      'Design Systems & Token Architecture',
-      'High-Fidelity Wireframing & Prototyping',
-      'Figma Auto-Layout & Interactive Components',
-      'User Flow & Information Architecture',
-      'Micro-Animations & Easing Curves',
-      'Accessibility (WCAG 2.1 AA/AAA)',
+      'Figma & Auto-Layout',
+      'Components & Variants',
+      'Interactive Prototyping',
+      'Wireframing & User Flows',
+      'Ergonomics & Interaction Design',
+      'Visual Hierarchy & Design Tokens',
     ],
   },
   {
-    title: 'Flutter & Frontend Engineering',
+    title: 'Frontend Engineering',
+    subtitle: 'Cross-Platform Mobile',
     skills: [
-      'Flutter & Dart Production Architecture',
-      'BLoC / Riverpod / State Management',
-      'CustomPainter & 60fps Canvas Animations',
-      'Clean Architecture & Repository Pattern',
-      'Cross-Platform iOS & Android Optimization',
-      'Platform Channels & Native Bridge Integration',
+      'Flutter & Dart SDK',
+      'Firebase (Auth & Backend)',
+      'State Management (Provider / BLoC)',
+      'Git & GitHub Version Control',
+      'Clean Architecture & Modular Patterns',
+      'Cross-Platform iOS & Android',
     ],
+  },
+  {
+    title: 'Languages & Architecture',
+    subtitle: 'Modular Engineering',
+    skills: [
+      'Dart',
+      'Python',
+      'SQL & Relational Databases',
+      'Clean Modular Architecture',
+      'Information Architecture',
+      'Design Token Systems',
+    ],
+  },
+];
+
+export const EDUCATION_HISTORY: EducationItem[] = [
+  {
+    degree: 'Master in Computer Applications (MCA)',
+    institution: 'Ajay Binay Institute of Technology',
+    affiliation: 'Biju Patnaik University of Technology (BPUT)',
+    period: '2024 – Present',
+    details: 'Focusing on advanced computing, modular software architecture, algorithms, and high-performance cross-platform mobile systems.',
+  },
+  {
+    degree: 'B.Sc. Computer Science',
+    institution: 'Sakti Sai Degree College, Kuspangi',
+    affiliation: 'Utkal University',
+    period: '2021 – 2024',
+    score: '83.7%',
+    details: 'Core algorithms, data structures, relational database management systems, and object-oriented software engineering.',
+  },
+  {
+    degree: '+2 Science',
+    institution: 'Sri Chaitanya Junior College, Rajahmundry',
+    affiliation: 'APBIE',
+    period: '2019 – 2021',
+    score: '85.7%',
+  },
+  {
+    degree: 'Matriculation',
+    institution: 'Govt. High School, Kalimela',
+    affiliation: 'BSE Odisha',
+    period: '2014 – 2019',
+    score: '80%',
   },
 ];
