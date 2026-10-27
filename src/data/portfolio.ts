@@ -180,8 +180,9 @@ export const EDUCATION_HISTORY: EducationItem[] = [
     degree: 'Master in Computer Applications (MCA)',
     institution: 'Ajay Binay Institute of Technology',
     affiliation: 'Biju Patnaik University of Technology (BPUT)',
-    period: '2024 – Present',
-    details: 'Focusing on advanced computing, modular software architecture, algorithms, and high-performance cross-platform mobile systems.',
+    period: '2024 – 2026',
+    score: 'Completed',
+    details: 'Mastered advanced computing, modular software architecture, algorithms, and high-performance cross-platform mobile systems.',
   },
   {
     degree: 'B.Sc. Computer Science',

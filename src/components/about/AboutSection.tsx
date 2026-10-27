@@ -91,7 +91,7 @@ export const AboutSection: React.FC = () => {
               <div className="p-3 sm:p-3.5 rounded-xl bg-neutral-50 border border-neutral-200/80">
                 <span className="text-[10px] sm:text-[11px] font-mono text-neutral-500 block uppercase">Degree</span>
                 <span className="text-base sm:text-lg font-bold text-neutral-900">MCA</span>
-                <span className="text-[10px] text-neutral-500 block">BPUT (Present)</span>
+                <span className="text-[10px] text-neutral-500 block">BPUT (2026)</span>
               </div>
               <div className="p-3 sm:p-3.5 rounded-xl bg-neutral-50 border border-neutral-200/80">
                 <span className="text-[10px] sm:text-[11px] font-mono text-neutral-500 block uppercase">Fidelity</span>
@@ -134,7 +134,7 @@ export const AboutSection: React.FC = () => {
               </div>
               <div className="flex items-center justify-between text-xs text-neutral-400">
                 <span>Education</span>
-                <span className="text-white font-medium">MCA Candidate, BPUT</span>
+                <span className="text-white font-medium">MCA Graduate, BPUT</span>
               </div>
               <div className="flex items-center justify-between text-xs text-neutral-400">
                 <span>Availability</span>
