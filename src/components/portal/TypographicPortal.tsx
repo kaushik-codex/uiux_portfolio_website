@@ -78,8 +78,8 @@ export const TypographicPortal: React.FC = () => {
       ref={containerRef}
       className="relative w-full h-[260vh] bg-transparent text-[#E2E8F0]"
     >
-      {/* Sticky Fullscreen Frame */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between items-center bg-transparent">
+      {/* Sticky Fullscreen Frame with dynamic mobile viewport height */}
+      <div className="sticky top-0 h-[100dvh] min-h-[100dvh] w-full overflow-hidden flex flex-col justify-between items-center bg-transparent">
         {/* Ambient Subtle Center Vignette / Star Depth */}
         <div
           className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,rgba(0,0,0,0.4)_75%)]"
@@ -87,13 +87,13 @@ export const TypographicPortal: React.FC = () => {
         />
 
         {/* Top spacer to balance HUD */}
-        <div className="w-full pt-20 px-6 max-w-7xl flex justify-between items-center z-10">
+        <div className="w-full pt-16 sm:pt-20 px-4 sm:px-6 max-w-7xl flex justify-between items-center z-10">
           <motion.div
             style={{ opacity: heroMetaOpacity, y: heroMetaY }}
-            className="flex items-center gap-3 text-xs font-mono tracking-widest text-neutral-400"
+            className="flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-xs font-mono tracking-widest text-neutral-400"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-            <span>PORTFOLIO // 2025</span>
+            <span>PORTFOLIO // 2026</span>
           </motion.div>
 
           <motion.div
@@ -106,7 +106,7 @@ export const TypographicPortal: React.FC = () => {
         </div>
 
         {/* Center Typographic Composition with Volumetric Light-Source Architecture */}
-        <div className="relative z-20 flex-1 flex flex-col items-center justify-center px-4 w-full max-w-6xl mx-auto select-none pointer-events-none">
+        <div className="relative z-20 flex-1 flex flex-col items-center justify-center px-2 sm:px-4 w-full max-w-6xl mx-auto select-none pointer-events-none">
           {/* Main Headline Scaled via Framer Motion with Origin centered on 'O' */}
           <motion.div
             ref={headlineWrapperRef}
@@ -120,9 +120,9 @@ export const TypographicPortal: React.FC = () => {
             {/* VOLUMETRIC LIGHT-SOURCE TYPOGRAPHY STACK: Emissive pure white light with mix-blend-mode: screen */}
             <div className="relative inline-block w-full">
               {/* Layer 1: Base Incandescent Core (Structural & Micro Edge Softening) */}
-              <h1 className="relative z-10 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] text-white mix-blend-screen blur-[0.5px]">
-                <span className="block mb-1 sm:mb-2 text-white">KAUSHIK</span>
-                <span className="block mb-1 sm:mb-2 text-white">KALYAN</span>
+              <h1 className="relative z-10 text-6xl min-[380px]:text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.86] sm:leading-[0.9] text-white mix-blend-screen blur-[0.5px]">
+                <span className="block mb-0.5 sm:mb-2 text-white">KAUSHIK</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KALYAN</span>
                 {/* The final word BOJJA containing the focal portal 'O' */}
                 <span className="inline-flex justify-center items-center gap-[0.02em] text-white">
                   <span>B</span>
@@ -148,10 +148,10 @@ export const TypographicPortal: React.FC = () => {
               {/* Layer 2: Micro Corona Bleed (blur-xs / 2px) */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 z-11 pointer-events-none select-none text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] text-white mix-blend-screen opacity-90 blur-xs"
+                className="absolute inset-0 z-11 pointer-events-none select-none text-6xl min-[380px]:text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.86] sm:leading-[0.9] text-white mix-blend-screen opacity-90 blur-xs"
               >
-                <span className="block mb-1 sm:mb-2 text-white">KAUSHIK</span>
-                <span className="block mb-1 sm:mb-2 text-white">KALYAN</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KAUSHIK</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KALYAN</span>
                 <span className="inline-flex justify-center items-center gap-[0.02em] text-white">
                   <span>B</span>
                   <span>O</span>
@@ -164,10 +164,10 @@ export const TypographicPortal: React.FC = () => {
               {/* Layer 3: Mid Volumetric Bloom (blur-md) */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 z-12 pointer-events-none select-none text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] text-white mix-blend-screen opacity-70 blur-md"
+                className="absolute inset-0 z-12 pointer-events-none select-none text-6xl min-[380px]:text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.86] sm:leading-[0.9] text-white mix-blend-screen opacity-70 blur-md"
               >
-                <span className="block mb-1 sm:mb-2 text-white">KAUSHIK</span>
-                <span className="block mb-1 sm:mb-2 text-white">KALYAN</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KAUSHIK</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KALYAN</span>
                 <span className="inline-flex justify-center items-center gap-[0.02em] text-white">
                   <span>B</span>
                   <span>O</span>
@@ -180,10 +180,10 @@ export const TypographicPortal: React.FC = () => {
               {/* Layer 4: Deep Volumetric Aura (blur-xl) */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 z-13 pointer-events-none select-none text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] text-white mix-blend-screen opacity-45 blur-xl"
+                className="absolute inset-0 z-13 pointer-events-none select-none text-6xl min-[380px]:text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.86] sm:leading-[0.9] text-white mix-blend-screen opacity-45 blur-xl"
               >
-                <span className="block mb-1 sm:mb-2 text-white">KAUSHIK</span>
-                <span className="block mb-1 sm:mb-2 text-white">KALYAN</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KAUSHIK</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KALYAN</span>
                 <span className="inline-flex justify-center items-center gap-[0.02em] text-white">
                   <span>B</span>
                   <span>O</span>
@@ -196,10 +196,10 @@ export const TypographicPortal: React.FC = () => {
               {/* Layer 5: Diffuse Outer Cosmic Dispersion (blur-3xl) */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 z-14 pointer-events-none select-none text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] text-white mix-blend-screen opacity-25 blur-3xl"
+                className="absolute inset-0 z-14 pointer-events-none select-none text-6xl min-[380px]:text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.86] sm:leading-[0.9] text-white mix-blend-screen opacity-25 blur-3xl"
               >
-                <span className="block mb-1 sm:mb-2 text-white">KAUSHIK</span>
-                <span className="block mb-1 sm:mb-2 text-white">KALYAN</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KAUSHIK</span>
+                <span className="block mb-0.5 sm:mb-2 text-white">KALYAN</span>
                 <span className="inline-flex justify-center items-center gap-[0.02em] text-white">
                   <span>B</span>
                   <span>O</span>
@@ -214,12 +214,12 @@ export const TypographicPortal: React.FC = () => {
           {/* Subtitle & Role Meta (Fades quickly on scroll) */}
           <motion.div
             style={{ opacity: heroMetaOpacity, y: heroMetaY }}
-            className="mt-6 sm:mt-10 text-center space-y-3 pointer-events-auto"
+            className="mt-4 sm:mt-8 text-center space-y-1 sm:space-y-2 pointer-events-auto px-2"
           >
-            <p className="text-base sm:text-xl md:text-2xl font-light tracking-wide text-neutral-300">
+            <p className="text-sm sm:text-xl md:text-2xl font-light tracking-wide text-neutral-300">
               {PERSONAL_INFO.title}
             </p>
-            <p className="max-w-xl mx-auto text-xs sm:text-sm text-neutral-500 font-normal leading-relaxed">
+            <p className="max-w-xl mx-auto text-xs sm:text-sm text-neutral-400 font-normal leading-relaxed">
               {PERSONAL_INFO.heroStatement}
             </p>
           </motion.div>
@@ -250,14 +250,14 @@ export const TypographicPortal: React.FC = () => {
         {/* Bottom Scroll Cue */}
         <motion.div
           style={{ opacity: heroMetaOpacity }}
-          className="w-full pb-8 flex flex-col items-center justify-center gap-2 z-10 pointer-events-auto"
+          className="w-full pb-4 sm:pb-8 flex flex-col items-center justify-center gap-1.5 sm:gap-2 z-10 pointer-events-auto"
         >
-          <span className="text-[11px] font-mono tracking-widest text-neutral-400 uppercase">
+          <span className="text-[10px] sm:text-[11px] font-mono tracking-widest text-neutral-400 uppercase">
             Scroll to enter portal
           </span>
-          <div className="w-5 h-8 rounded-full border border-neutral-600 flex justify-center pt-1.5">
+          <div className="w-4 h-7 sm:w-5 sm:h-8 rounded-full border border-neutral-600 flex justify-center pt-1 sm:pt-1.5">
             <motion.div
-              animate={{ y: [0, 8, 0], opacity: [0.4, 1, 0.4] }}
+              animate={{ y: [0, 6, 0], opacity: [0.4, 1, 0.4] }}
               transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
               className="w-1 h-2 rounded-full bg-white"
             />

@@ -33,7 +33,7 @@ export const CosmicFooter: React.FC = () => {
   return (
     <footer
       id="contact"
-      className="relative w-full bg-transparent text-[#E2E8F0] min-h-screen flex flex-col justify-between overflow-hidden pt-20 pb-12 px-4 sm:px-8 lg:px-12 z-20"
+      className="relative w-full bg-transparent text-[#E2E8F0] min-h-[90vh] sm:min-h-screen flex flex-col justify-between overflow-hidden pt-16 sm:pt-20 pb-10 sm:pb-12 px-3 sm:px-8 lg:px-12 z-20"
     >
       {/* Subtle radial cosmic glow centered behind footer */}
       <div
@@ -42,43 +42,43 @@ export const CosmicFooter: React.FC = () => {
       />
 
       {/* Main Closing Section Container */}
-      <div className="relative z-10 max-w-6xl mx-auto w-full my-auto text-center space-y-12 sm:space-y-16">
+      <div className="relative z-10 max-w-6xl mx-auto w-full my-auto text-center space-y-8 sm:space-y-16">
         {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono tracking-wider text-neutral-300 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] sm:text-xs font-mono tracking-wider text-neutral-300 backdrop-blur-md">
           <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.9)] animate-pulse" />
           <span>CURRENT STATUS // READY FOR TRANSMISSION</span>
         </div>
 
         {/* Editorial Closing Statement */}
-        <p className="max-w-2xl mx-auto text-xl sm:text-2xl md:text-3xl font-light tracking-wide text-neutral-200 leading-relaxed">
+        <p className="max-w-2xl mx-auto text-lg sm:text-2xl md:text-3xl font-light tracking-wide text-neutral-200 leading-relaxed px-2">
           {PERSONAL_INFO.closingStatement}
         </p>
 
         {/* PRIMARY CTA: VOLUMETRIC LIGHT-SOURCE TYPOGRAPHY "LET'S WORK TOGETHER" */}
-        <div className="relative inline-block group my-6">
+        <div className="relative inline-block group my-4 sm:my-6 max-w-full">
           {/* Shifting Vibrant Gradient Aura behind CTA */}
           <div
-            className="absolute -inset-4 sm:-inset-6 rounded-3xl cta-gradient-glow pointer-events-none"
+            className="absolute -inset-3 sm:-inset-6 rounded-3xl cta-gradient-glow pointer-events-none"
             aria-hidden="true"
           />
 
           {/* Actionable Button / Link */}
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
-            className="relative z-10 inline-block px-8 sm:px-14 py-6 sm:py-8 rounded-2xl bg-black/85 hover:bg-neutral-950/90 border border-white/20 hover:border-white/60 transition-all duration-300 shadow-2xl outline-none focus-visible:ring-4 focus-visible:ring-white/50"
+            className="relative z-10 inline-block px-4 min-[400px]:px-8 sm:px-14 py-5 sm:py-8 rounded-2xl bg-black/85 hover:bg-neutral-950/90 border border-white/20 hover:border-white/60 transition-all duration-300 shadow-2xl outline-none focus-visible:ring-4 focus-visible:ring-white/50 max-w-full"
             aria-label="Send email to collaborate with Kaushik Kalyan Bojja"
           >
             {/* VOLUMETRIC LIGHT-SOURCE STACK: Emissive pure white light with mix-blend-mode: screen */}
-            <div className="relative inline-block">
+            <div className="relative inline-block max-w-full">
               {/* Layer 1: Incandescent Core & Micro Edge Softening */}
-              <span className="relative z-10 text-3xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen blur-[0.5px] block">
+              <span className="relative z-10 text-2xl min-[360px]:text-[6.8vw] min-[480px]:text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen blur-[0.5px] block leading-tight whitespace-nowrap">
                 LET&apos;S WORK TOGETHER
               </span>
 
               {/* Layer 2: Micro Corona Bleed (blur-xs / 2px) */}
               <span
                 aria-hidden="true"
-                className="absolute inset-0 z-11 pointer-events-none select-none text-3xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-90 blur-xs block"
+                className="absolute inset-0 z-11 pointer-events-none select-none text-2xl min-[360px]:text-[6.8vw] min-[480px]:text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-90 blur-xs block leading-tight whitespace-nowrap"
               >
                 LET&apos;S WORK TOGETHER
               </span>
@@ -86,7 +86,7 @@ export const CosmicFooter: React.FC = () => {
               {/* Layer 3: Mid Volumetric Bloom (blur-md) */}
               <span
                 aria-hidden="true"
-                className="absolute inset-0 z-12 pointer-events-none select-none text-3xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-70 blur-md group-hover:opacity-90 group-hover:blur-lg transition-all duration-300 block"
+                className="absolute inset-0 z-12 pointer-events-none select-none text-2xl min-[360px]:text-[6.8vw] min-[480px]:text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-70 blur-md group-hover:opacity-90 group-hover:blur-lg transition-all duration-300 block leading-tight whitespace-nowrap"
               >
                 LET&apos;S WORK TOGETHER
               </span>
@@ -94,7 +94,7 @@ export const CosmicFooter: React.FC = () => {
               {/* Layer 4: Deep Volumetric Aura (blur-xl) */}
               <span
                 aria-hidden="true"
-                className="absolute inset-0 z-13 pointer-events-none select-none text-3xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-45 blur-xl group-hover:opacity-75 group-hover:scale-105 transition-all duration-300 block"
+                className="absolute inset-0 z-13 pointer-events-none select-none text-2xl min-[360px]:text-[6.8vw] min-[480px]:text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-45 blur-xl group-hover:opacity-75 group-hover:scale-105 transition-all duration-300 block leading-tight whitespace-nowrap"
               >
                 LET&apos;S WORK TOGETHER
               </span>
@@ -102,27 +102,27 @@ export const CosmicFooter: React.FC = () => {
               {/* Layer 5: Diffuse Outer Dispersion (blur-3xl) */}
               <span
                 aria-hidden="true"
-                className="absolute inset-0 z-14 pointer-events-none select-none text-3xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-25 blur-3xl group-hover:opacity-50 transition-all duration-300 block"
+                className="absolute inset-0 z-14 pointer-events-none select-none text-2xl min-[360px]:text-[6.8vw] min-[480px]:text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mix-blend-screen opacity-25 blur-3xl group-hover:opacity-50 transition-all duration-300 block leading-tight whitespace-nowrap"
               >
                 LET&apos;S WORK TOGETHER
               </span>
             </div>
 
-            <span className="block mt-4 text-xs sm:text-sm font-mono tracking-widest text-neutral-400 group-hover:text-cyan-300 transition-colors">
+            <span className="block mt-3 sm:mt-4 text-[10px] min-[380px]:text-xs sm:text-sm font-mono tracking-wider sm:tracking-widest text-neutral-400 group-hover:text-cyan-300 transition-colors truncate max-w-full">
               [ TRANSMIT INQUIRY → {PERSONAL_INFO.email} ]
             </span>
           </a>
         </div>
 
         {/* Secondary Social / Professional Links */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 pt-6">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-8 pt-4 sm:pt-6">
           {SOCIAL_LINKS.map((link) => (
             <a
               key={link.label}
               href={link.href}
               target={link.iconName !== 'mail' ? '_blank' : undefined}
               rel={link.iconName !== 'mail' ? 'noopener noreferrer' : undefined}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 text-xs sm:text-sm font-mono text-neutral-300 hover:text-white transition-all shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 text-xs sm:text-sm font-mono text-neutral-300 hover:text-white transition-all shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-white/50"
             >
               {renderSocialIcon(link.iconName)}
               <span>{link.label}</span>
@@ -132,7 +132,8 @@ export const CosmicFooter: React.FC = () => {
       </div>
 
       {/* Bottom Legal & Back to Top Telemetry Bar */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto pt-16 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-500">
+      <div className="relative z-10 w-full max-w-7xl mx-auto pt-10 sm:pt-16 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs font-mono text-neutral-500">
+
         <div>
           <span>© 2026 {PERSONAL_INFO.name}. Designed & Built with Next.js, Tailwind & Flutter spirit.</span>
         </div>

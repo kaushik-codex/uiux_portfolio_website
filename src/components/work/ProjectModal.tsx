@@ -33,7 +33,7 @@ const ProjectModalContent: React.FC<ProjectModalContentProps> = ({ project, onCl
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
@@ -53,12 +53,12 @@ const ProjectModalContent: React.FC<ProjectModalContentProps> = ({ project, onCl
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full max-w-4xl bg-neutral-900 border border-neutral-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 text-neutral-100 my-6 sm:my-8 max-h-[92vh] flex flex-col"
+        className="relative w-full max-w-4xl bg-neutral-900 border border-neutral-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 text-neutral-100 my-2 sm:my-8 max-h-[95vh] sm:max-h-[92vh] flex flex-col"
       >
         {/* Header Bar */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-800 bg-neutral-950/90 shrink-0">
-          <div className="flex items-center gap-3">
-            <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-neutral-800 text-neutral-200 border border-neutral-700 tracking-wide">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-neutral-800 bg-neutral-950/90 shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <span className="text-[11px] sm:text-xs font-mono font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded bg-neutral-800 text-neutral-200 border border-neutral-700 tracking-wide">
               {project.modalHeader || `CASE STUDY // ${project.categoryTag}`}
             </span>
             <span className="text-xs font-mono text-neutral-400 hidden sm:inline">
@@ -76,16 +76,16 @@ const ProjectModalContent: React.FC<ProjectModalContentProps> = ({ project, onCl
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-6 sm:p-8 space-y-8 overflow-y-auto custom-scrollbar">
+        <div className="p-4 sm:p-8 space-y-6 sm:space-y-8 overflow-y-auto custom-scrollbar">
           {/* Project Title and Role Banner */}
           <div>
-            <h2 id="modal-title" className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 id="modal-title" className="text-xl sm:text-4xl font-extrabold text-white tracking-tight">
               {project.title}
             </h2>
-            <p className="text-base sm:text-lg text-neutral-300 mt-1 font-medium">
+            <p className="text-sm sm:text-lg text-neutral-300 mt-1 font-medium">
               {project.subtitle}
             </p>
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-3 text-xs font-mono text-neutral-400">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 mt-2 sm:mt-3 text-[11px] sm:text-xs font-mono text-neutral-400">
               <span className="text-neutral-200">{project.roleText || `Role: ${project.role}`}</span>
               <span>•</span>
               <span>Status: <strong className="text-emerald-400">Production Verified</strong></span>
@@ -94,36 +94,36 @@ const ProjectModalContent: React.FC<ProjectModalContentProps> = ({ project, onCl
 
           {/* Verified Metrics Row (3-Column Architecture) */}
           {project.metrics && project.metrics.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 sm:p-5 rounded-xl bg-neutral-950/80 border border-neutral-800 shadow-inner">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 p-3 sm:p-5 rounded-xl bg-neutral-950/80 border border-neutral-800 shadow-inner">
               {project.metrics.map((m, idx) => (
-                <div key={idx} className="text-center p-2 rounded-lg bg-neutral-900/50 border border-neutral-800/60">
-                  <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-widest">{m.label}</div>
-                  <div className="text-base sm:text-lg font-bold text-white mt-1">{m.value}</div>
+                <div key={idx} className="text-center p-1.5 sm:p-2 rounded-lg bg-neutral-900/50 border border-neutral-800/60">
+                  <div className="text-[9px] sm:text-[11px] font-mono text-neutral-400 uppercase tracking-wider">{m.label}</div>
+                  <div className="text-xs sm:text-lg font-bold text-white mt-0.5 sm:mt-1 truncate">{m.value}</div>
                 </div>
               ))}
             </div>
           )}
 
           {/* LOCAL LAYOUT ASSETS GALLERY: Screenshots & Wireframes */}
-          <div className="space-y-4 rounded-2xl bg-neutral-950 border border-neutral-800 p-4 sm:p-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-800/80 pb-3">
+          <div className="space-y-3 sm:space-y-4 rounded-xl sm:rounded-2xl bg-neutral-950 border border-neutral-800 p-3 sm:p-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 border-b border-neutral-800/80 pb-3">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-neutral-400">
+                <span className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-neutral-400">
                   Layout Asset Viewer
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-300">
+                <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-300">
                   Local High-Fidelity
                 </span>
               </div>
 
               {/* Tab Switcher: Screenshots vs Wireframes */}
-              <div className="flex items-center gap-1.5 p-1 rounded-lg bg-neutral-900 border border-neutral-800 self-start sm:self-auto">
+              <div className="flex items-center gap-1 p-1 rounded-lg bg-neutral-900 border border-neutral-800 w-full sm:w-auto">
                 <button
                   onClick={() => {
                     setActiveTab('screenshots');
                     setSelectedAssetIndex(0);
                   }}
-                  className={`flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium transition-all cursor-pointer ${
+                  className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-md text-[11px] sm:text-xs font-medium transition-all cursor-pointer ${
                     activeTab === 'screenshots'
                       ? 'bg-neutral-800 text-white shadow-sm'
                       : 'text-neutral-400 hover:text-neutral-200'
@@ -138,7 +138,7 @@ const ProjectModalContent: React.FC<ProjectModalContentProps> = ({ project, onCl
                     setActiveTab('wireframes');
                     setSelectedAssetIndex(0);
                   }}
-                  className={`flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium transition-all cursor-pointer ${
+                  className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-md text-[11px] sm:text-xs font-medium transition-all cursor-pointer ${
                     activeTab === 'wireframes'
                       ? 'bg-neutral-800 text-white shadow-sm'
                       : 'text-neutral-400 hover:text-neutral-200'
@@ -151,7 +151,7 @@ const ProjectModalContent: React.FC<ProjectModalContentProps> = ({ project, onCl
             </div>
 
             {/* Asset Hero Stage */}
-            <div className="relative w-full h-80 sm:h-96 rounded-xl overflow-hidden bg-neutral-900 border border-neutral-800 flex items-center justify-center p-3">
+            <div className="relative w-full h-64 sm:h-96 rounded-xl overflow-hidden bg-neutral-900 border border-neutral-800 flex items-center justify-center p-2 sm:p-3">
               {activeAssetSrc ? (
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image

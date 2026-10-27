@@ -47,24 +47,24 @@ export const GlassHud: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-5 left-0 right-0 z-40 flex justify-center px-4 pointer-events-none">
+    <header className="fixed top-3 sm:top-5 left-0 right-0 z-40 flex justify-center px-2.5 sm:px-4 pointer-events-none">
       <nav
         aria-label="Main Portfolio Navigation"
-        className={`pointer-events-auto flex items-center justify-between gap-3 sm:gap-6 px-4 sm:px-6 py-2.5 rounded-full transition-all duration-300 ${
+        className={`pointer-events-auto flex items-center justify-between gap-1.5 sm:gap-6 px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-full transition-all duration-300 max-w-full ${
           isScrolled
             ? 'glass-hud shadow-2xl scale-[0.98]'
-            : 'bg-black/70 backdrop-blur-md border border-white/10 shadow-lg'
+            : 'bg-black/75 backdrop-blur-md border border-white/10 shadow-lg'
         }`}
       >
         {/* Brand Identity / Home Monogram */}
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero')}
-          className="flex items-center gap-2 group text-xs font-mono font-medium tracking-wider text-neutral-300 hover:text-white transition-colors"
+          className="flex items-center gap-1.5 sm:gap-2 group text-xs font-mono font-medium tracking-wider text-neutral-300 hover:text-white transition-colors"
           aria-label="Back to top"
         >
           <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-          <span className="font-semibold tracking-normal text-sm text-neutral-100 hidden sm:inline">
+          <span className="font-bold tracking-normal text-xs sm:text-sm text-neutral-100">
             KB
           </span>
           <span className="text-[10px] text-neutral-500 uppercase hidden md:inline">
@@ -73,7 +73,7 @@ export const GlassHud: React.FC = () => {
         </a>
 
         {/* Navigation Anchors */}
-        <ul className="flex items-center gap-1 sm:gap-2">
+        <ul className="flex items-center gap-0.5 sm:gap-2">
           {NAV_ITEMS.map((item) => {
             const sectionKey = item.href.replace('#', '');
             const isActive = activeSection === sectionKey;
@@ -83,13 +83,19 @@ export const GlassHud: React.FC = () => {
                 <a
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`relative px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-white/50 ${
+                  className={`relative px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-white/50 ${
                     isActive
                       ? 'text-white bg-white/15 shadow-sm'
                       : 'text-neutral-400 hover:text-neutral-100 hover:bg-white/5'
                   }`}
                 >
-                  {item.label}
+                  {item.label === 'Selected Work' ? (
+                    <>
+                      <span className="hidden sm:inline">Selected </span>Work
+                    </>
+                  ) : (
+                    item.label
+                  )}
                   {isActive && (
                     <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-3 h-0.5 bg-white rounded-full shadow-[0_0_6px_rgba(255,255,255,0.8)]" />
                   )}
@@ -100,7 +106,7 @@ export const GlassHud: React.FC = () => {
         </ul>
 
         {/* Production Utilities HUD: Email, LinkedIn, GitHub */}
-        <div className="flex items-center gap-2 pl-2 sm:pl-3 border-l border-white/15">
+        <div className="flex items-center gap-1 sm:gap-2 pl-1.5 sm:pl-3 border-l border-white/15">
           {/* Email Link */}
           <a
             href={`mailto:${PERSONAL_INFO.email}`}

@@ -128,10 +128,10 @@ export const WireframeLoader: React.FC<WireframeLoaderProps> = ({ onComplete }) 
           </div>
 
           {/* Central Architectural Wireframe transforming to High-Fidelity Hero */}
-          <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 max-w-5xl mx-auto w-full">
+          <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-3 sm:px-6 max-w-5xl mx-auto w-full">
             {/* Architectural Frame Bounding Box with Corner Registration Crosses */}
             <div
-              className={`relative w-full p-8 md:p-12 transition-all duration-500 ${
+              className={`relative w-full p-4 sm:p-8 md:p-12 transition-all duration-500 ${
                 isPhase1
                   ? 'border border-dashed border-neutral-700 bg-neutral-950/40 rounded-none'
                   : isPhase2
@@ -141,61 +141,61 @@ export const WireframeLoader: React.FC<WireframeLoaderProps> = ({ onComplete }) 
             >
               {/* Corner Registration Crosshairs in Phase 1 & 2 */}
               <div
-                className="absolute top-2 left-2 font-mono text-[10px] text-neutral-500 transition-opacity duration-500"
+                className="absolute top-2 left-2 font-mono text-[9px] sm:text-[10px] text-neutral-500 transition-opacity duration-500"
                 style={{ opacity: 1 - phase3Progress }}
               >
                 ┌ COORD: [0, 0]
               </div>
               <div
-                className="absolute top-2 right-2 font-mono text-[10px] text-neutral-500 transition-opacity duration-500"
+                className="absolute top-2 right-2 font-mono text-[9px] sm:text-[10px] text-neutral-500 transition-opacity duration-500"
                 style={{ opacity: 1 - phase3Progress }}
               >
                 COORD: [100, 0] ┐
               </div>
               <div
-                className="absolute bottom-2 left-2 font-mono text-[10px] text-neutral-500 transition-opacity duration-500"
+                className="absolute bottom-2 left-2 font-mono text-[9px] sm:text-[10px] text-neutral-500 transition-opacity duration-500"
                 style={{ opacity: 1 - phase3Progress }}
               >
                 └ COORD: [0, 100]
               </div>
               <div
-                className="absolute bottom-2 right-2 font-mono text-[10px] text-neutral-500 transition-opacity duration-500"
+                className="absolute bottom-2 right-2 font-mono text-[9px] sm:text-[10px] text-neutral-500 transition-opacity duration-500"
                 style={{ opacity: 1 - phase3Progress }}
               >
                 COORD: [100, 100] ┘
               </div>
 
               {/* Wireframe Tag Line / Real Tag Line */}
-              <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4 sm:mb-6">
                 {isPhase1 ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-24 h-2 bg-neutral-800 animate-pulse rounded" />
-                    <span className="font-mono text-[10px] text-neutral-500 tracking-widest">[IDENTITY_META]</span>
-                    <div className="w-24 h-2 bg-neutral-800 animate-pulse rounded" />
+                    <div className="w-16 sm:w-24 h-2 bg-neutral-800 animate-pulse rounded" />
+                    <span className="font-mono text-[9px] sm:text-[10px] text-neutral-500 tracking-widest">[IDENTITY_META]</span>
+                    <div className="w-16 sm:w-24 h-2 bg-neutral-800 animate-pulse rounded" />
                   </div>
                 ) : (
                   <motion.div
                     initial={{ opacity: 0, y: 4 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-widest text-neutral-400 bg-neutral-800/60 border border-neutral-700/50"
+                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] sm:text-xs font-mono tracking-widest text-neutral-400 bg-neutral-800/60 border border-neutral-700/50"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    PORTFOLIO // 2025 EDITION
+                    PORTFOLIO // 2026 EDITION
                   </motion.div>
                 )}
               </div>
 
               {/* Central Title: Wireframe Bars -> Pure Inter Bold Headline */}
-              <div className="text-center my-4">
+              <div className="text-center my-3 sm:my-4">
                 {isPhase1 ? (
                   <div className="space-y-3 flex flex-col items-center">
-                    <div className="w-3/4 max-w-lg h-9 bg-neutral-800 border border-neutral-700 flex items-center justify-center">
-                      <span className="font-mono text-[11px] text-neutral-500 tracking-wider">
+                    <div className="w-3/4 max-w-lg h-8 sm:h-9 bg-neutral-800 border border-neutral-700 flex items-center justify-center">
+                      <span className="font-mono text-[10px] sm:text-[11px] text-neutral-500 tracking-wider">
                         [STR_BOX: PRIMARY_HEADLINE_TEXT]
                       </span>
                     </div>
-                    <div className="w-1/2 max-w-sm h-6 bg-neutral-800/80 border border-neutral-700/80 flex items-center justify-center">
-                      <span className="font-mono text-[10px] text-neutral-600">
+                    <div className="w-1/2 max-w-sm h-5 sm:h-6 bg-neutral-800/80 border border-neutral-700/80 flex items-center justify-center">
+                      <span className="font-mono text-[9px] sm:text-[10px] text-neutral-600">
                         [STR_BOX: SUBTITLE_TEXT]
                       </span>
                     </div>
@@ -205,17 +205,17 @@ export const WireframeLoader: React.FC<WireframeLoaderProps> = ({ onComplete }) 
                     initial={{ opacity: 0, scale: 0.96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4 }}
-                    className="space-y-3"
+                    className="space-y-2 sm:space-y-3"
                   >
                     <h1
-                      className={`text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight transition-colors duration-700 ${
+                      className={`text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight transition-colors duration-700 ${
                         isPhase3 ? 'text-[#E2E8F0] silver-text' : 'text-neutral-300'
                       }`}
                     >
                       KAUSHIK KALYAN BOJJA
                     </h1>
                     <p
-                      className={`text-sm sm:text-lg md:text-xl font-medium tracking-wide transition-colors duration-500 ${
+                      className={`text-xs sm:text-lg md:text-xl font-medium tracking-wide transition-colors duration-500 ${
                         isPhase3 ? 'text-neutral-400' : 'text-neutral-500'
                       }`}
                     >
@@ -226,16 +226,16 @@ export const WireframeLoader: React.FC<WireframeLoaderProps> = ({ onComplete }) 
               </div>
 
               {/* Wireframe Mockup Slots / Cards transitioning into Refined UI */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8 pt-6 border-t border-white/10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mt-5 sm:mt-8 pt-4 sm:pt-6 border-t border-white/10">
                 {[
-                  { label: 'WORK_01', title: 'FinPulse' },
-                  { label: 'WORK_02', title: 'Aether' },
-                  { label: 'WORK_03', title: 'Lumina' },
-                  { label: 'WORK_04', title: 'OmniRoute' },
+                  { label: 'WORK_01', title: 'ReCraft AI' },
+                  { label: 'WORK_02', title: 'Gourmet' },
+                  { label: 'DISC_03', title: 'Design Tokens' },
+                  { label: 'DISC_04', title: 'Flutter App' },
                 ].map((card, idx) => (
                   <div
                     key={card.label}
-                    className={`p-3 relative overflow-hidden transition-all duration-500 ${
+                    className={`p-2 sm:p-3 relative overflow-hidden transition-all duration-500 ${
                       isPhase1
                         ? 'border border-dashed border-neutral-700 bg-neutral-900/20'
                         : isPhase2
@@ -245,19 +245,19 @@ export const WireframeLoader: React.FC<WireframeLoaderProps> = ({ onComplete }) 
                   >
                     {/* Wireframe Diagonal X placeholder in Phase 1 */}
                     {isPhase1 ? (
-                      <div className="h-14 sm:h-16 relative flex items-center justify-center border border-neutral-800 bg-neutral-950/60">
+                      <div className="h-11 sm:h-16 relative flex items-center justify-center border border-neutral-800 bg-neutral-950/60">
                         <svg className="absolute inset-0 w-full h-full text-neutral-800" preserveAspectRatio="none">
                           <line x1="0" y1="0" x2="100%" y2="100%" stroke="currentColor" strokeWidth="1" />
                           <line x1="100%" y1="0" x2="0" y2="100%" stroke="currentColor" strokeWidth="1" />
                         </svg>
-                        <span className="relative z-10 font-mono text-[9px] text-neutral-500">
+                        <span className="relative z-10 font-mono text-[8px] sm:text-[9px] text-neutral-500">
                           {card.label}
                         </span>
                       </div>
                     ) : (
-                      <div className="h-14 sm:h-16 rounded flex flex-col justify-end p-2 bg-gradient-to-t from-black/80 to-neutral-900/40">
-                        <span className="text-[10px] font-mono text-neutral-500">0{idx + 1}</span>
-                        <span className="text-xs font-semibold text-neutral-200 truncate">{card.title}</span>
+                      <div className="h-11 sm:h-16 rounded flex flex-col justify-end p-1.5 sm:p-2 bg-gradient-to-t from-black/80 to-neutral-900/40">
+                        <span className="text-[9px] sm:text-[10px] font-mono text-neutral-500">0{idx + 1}</span>
+                        <span className="text-[11px] sm:text-xs font-semibold text-neutral-200 truncate">{card.title}</span>
                       </div>
                     )}
                   </div>
