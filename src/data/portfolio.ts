@@ -111,13 +111,16 @@ export const PROJECTS: Project[] = [
 
     // Layout assets
     mockupType: 'gourmet',
-    featuredImage: '/projects/gourmet/gourmet-home.svg',
+    featuredImage: '/projects/gourmet/gourmet-home.jpg',
     screenshots: [
-      '/projects/gourmet/gourmet-home.svg',
-      '/projects/gourmet/gourmet-auth.svg',
+      '/projects/gourmet/gourmet-home.jpg',
+      '/projects/gourmet/gourmet-auth.jpg',
+      '/projects/gourmet/gourmet-profile.jpg',
     ],
     wireframes: [
       '/projects/gourmet/gourmet-wireframe.svg',
+      '/projects/gourmet/gourmet-auth.jpg',
+      '/projects/gourmet/gourmet-profile.jpg',
     ],
     accentColor: '#F97316',
 
